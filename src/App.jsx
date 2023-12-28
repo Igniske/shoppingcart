@@ -42,6 +42,12 @@ function App() {
     setValorFinal(newTotal);
   };
 
+
+  // Function para vaciar el carrito
+  const clearCart = () => {
+    setCarritoDeCompras([]);
+  };
+
   const objectExistsWithKeyValue = (array, key, value) => {
     return array.some(obj => Object.hasOwnProperty.call(obj, key) && obj[key] === value);
   };
@@ -128,6 +134,7 @@ function App() {
         carritoDeCompras={carritoDeCompras}
         removeFromCart={removeFromCart}
         updateCartItemQuantity={updateCartItemQuantity}
+        vaciarCarrito={clearCart}
       />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-0">
